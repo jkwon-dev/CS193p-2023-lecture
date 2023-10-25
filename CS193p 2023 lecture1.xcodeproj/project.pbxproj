@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D13FEA22AE51F6D0042E1F3 /* MemorizeGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D13FEA12AE51F6D0042E1F3 /* MemorizeGame.swift */; };
+		1D13FEA42AE5214C0042E1F3 /* EmojiMemoryGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D13FEA32AE5214C0042E1F3 /* EmojiMemoryGame.swift */; };
 		1D4253032ADD4100004B3B91 /* CS193p_2023_lecture1App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4253022ADD4100004B3B91 /* CS193p_2023_lecture1App.swift */; };
 		1D4253052ADD4100004B3B91 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4253042ADD4100004B3B91 /* ContentView.swift */; };
 		1D4253072ADD4100004B3B91 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D4253062ADD4100004B3B91 /* Assets.xcassets */; };
@@ -14,6 +16,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1D13FEA12AE51F6D0042E1F3 /* MemorizeGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemorizeGame.swift; sourceTree = "<group>"; };
+		1D13FEA32AE5214C0042E1F3 /* EmojiMemoryGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiMemoryGame.swift; sourceTree = "<group>"; };
 		1D4252FF2ADD4100004B3B91 /* CS193p 2023 lecture1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CS193p 2023 lecture1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D4253022ADD4100004B3B91 /* CS193p_2023_lecture1App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CS193p_2023_lecture1App.swift; sourceTree = "<group>"; };
 		1D4253042ADD4100004B3B91 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -53,6 +57,8 @@
 			children = (
 				1D4253022ADD4100004B3B91 /* CS193p_2023_lecture1App.swift */,
 				1D4253042ADD4100004B3B91 /* ContentView.swift */,
+				1D13FEA12AE51F6D0042E1F3 /* MemorizeGame.swift */,
+				1D13FEA32AE5214C0042E1F3 /* EmojiMemoryGame.swift */,
 				1D4253062ADD4100004B3B91 /* Assets.xcassets */,
 				1D4253082ADD4100004B3B91 /* Preview Content */,
 			);
@@ -139,6 +145,8 @@
 			files = (
 				1D4253052ADD4100004B3B91 /* ContentView.swift in Sources */,
 				1D4253032ADD4100004B3B91 /* CS193p_2023_lecture1App.swift in Sources */,
+				1D13FEA22AE51F6D0042E1F3 /* MemorizeGame.swift in Sources */,
+				1D13FEA42AE5214C0042E1F3 /* EmojiMemoryGame.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
