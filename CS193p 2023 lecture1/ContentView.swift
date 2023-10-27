@@ -8,9 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    var viewModel: EmojiMemoryGame
-    
-    let emojis = ["👻", "🎃", "🕷️", "😈", "💀", "🕸️", "🧙‍♀️", "🙀", "👹", "😱", "☠️", "🍭"]
+    @ObservedObject var viewModel: EmojiMemoryGame
     
     var body: some View {
         ScrollView {
@@ -20,10 +18,13 @@ struct ContentView: View {
     }
     
     var cards: some View {
-        LazyVGrid(columns: [GridItem(.adaptive(minimum: 85))] ) {
-            ForEach(emojis.indices, id: \.self) { index in
-                CardView(content: emojis[index])
+        LazyVGrid(columns: [GridItem(.adaptive(minimum: 75))] ) {
+            ForEach(viewModel.cards) { card in
+                CardView(card: card)
                     .aspectRatio(2/3, contentMode: .fit)
+                    .onTapGesture {
+                        viewModel.choose(card)
+                    }
             }
         }
         .foregroundColor(.orange)
@@ -32,27 +33,24 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        let game = EmojiMemoryGame()
+        ContentView(viewModel: game)
     }
 }
 
 struct CardView: View {
-    let content: String
-    @State var isFaceUp: Bool = true
+    let card: MemoryGame<String>.Card
     
     var body: some View {
         ZStack {
-            let base = RoundedRectangle(cornerRadius: 12)
-            Group {
-                base.fill(.white)
-                base.strokeBorder(lineWidth: 2)
-                Text(content)
-                    .font(.largeTitle)
+            let shape = RoundedRectangle(cornerRadius: 12)
+            if card.isFaceUp {
+                shape.fill().foregroundColor(.white)
+                shape.strokeBorder(lineWidth: 3)
+                Text(card.content).font(.largeTitle)
+            } else {
+                shape.fill()
             }
-            .opacity(isFaceUp ? 1 : 0)
-            base.fill().opacity(isFaceUp ? 0 : 1)
-        }.onTapGesture {
-            isFaceUp.toggle()
         }
     }
 }
